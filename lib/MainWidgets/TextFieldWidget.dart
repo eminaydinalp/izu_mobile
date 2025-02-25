@@ -7,6 +7,7 @@ class Textfieldwidget extends StatefulWidget {
 
 class _TextfieldwidgetState extends State<Textfieldwidget> {
   String _userName = "";
+  TextEditingController _controller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -26,9 +27,10 @@ class _TextfieldwidgetState extends State<Textfieldwidget> {
                       borderRadius: BorderRadius.circular(15))),
               onChanged: (value) {
                 setState(() {
-                  _userName = value;
+                  //_userName = value;
                 });
               },
+              controller: _controller,
             ),
           ),
           SizedBox(
@@ -40,8 +42,22 @@ class _TextfieldwidgetState extends State<Textfieldwidget> {
               fontSize: 24
             ),
           ),
+          SizedBox(
+            height: 25,
+          ),
+          ElevatedButton(
+            onPressed: _showUserName,
+            child: Text("Login"),
+          )
         ],
       ),
     );
+  }
+
+  void _showUserName(){
+    setState(() {
+      _userName = _controller.text;
+    });
+
   }
 }
