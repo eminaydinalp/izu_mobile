@@ -1,6 +1,9 @@
 
 import 'package:flutter/material.dart';
+import 'package:konu_anlatim/MainWidgets/ButtonWidget.dart';
+import 'package:konu_anlatim/MainWidgets/ColumnAndRow.dart';
 import 'package:konu_anlatim/MainWidgets/ContainerWidget.dart';
+import 'package:konu_anlatim/MainWidgets/TextFieldWidget.dart';
 import 'package:konu_anlatim/MainWidgets/TextWidget.dart';
 
 void main() {
@@ -14,7 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Containerwidget()
+      home: Textfieldwidget()
     );
   }
 }
