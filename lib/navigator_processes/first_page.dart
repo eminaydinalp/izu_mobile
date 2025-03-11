@@ -16,16 +16,30 @@ class FirstPage extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
           onPressed: (){
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (context) => SecondPage())
-
-            );
+            //goNewPage(context);
+            goNewPageWithData(context);
           },
           child: Text("Go New Page"),
         ),
       ),
+    );
+  }
+
+  void goNewPage(BuildContext context){
+    Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => SecondPage())
+
+    );
+  }
+
+  void goNewPageWithData(BuildContext context){
+    Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => SecondPage(data: "Merhaba!",))
+
     );
   }
 }

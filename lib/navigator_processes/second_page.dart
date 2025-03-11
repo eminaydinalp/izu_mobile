@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
 class SecondPage extends StatelessWidget {
-  const SecondPage({super.key});
+
+  String? data;
+
+  //SecondPage(this.data);
+  SecondPage({this.data});
 
   @override
   Widget build(BuildContext context) {
@@ -13,11 +17,18 @@ class SecondPage extends StatelessWidget {
       ),
       
       body: Center(
-        child: ElevatedButton(
-          onPressed: (){
-            Navigator.pop(context);
-          },
-          child: Text("Go Back"),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text("Gelen Data : ${data}"),
+            SizedBox(height: 16,),
+            ElevatedButton(
+              onPressed: (){
+                Navigator.pop(context);
+              },
+              child: Text("Go Back"),
+            ),
+          ],
         ),
       ),
     );
