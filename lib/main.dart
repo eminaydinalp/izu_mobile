@@ -5,6 +5,7 @@ import 'package:konu_anlatim/MainWidgets/ColumnAndRow.dart';
 import 'package:konu_anlatim/MainWidgets/ContainerWidget.dart';
 import 'package:konu_anlatim/MainWidgets/TextFieldWidget.dart';
 import 'package:konu_anlatim/MainWidgets/TextWidget.dart';
+import 'package:konu_anlatim/navigator_processes/first_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Textfieldwidget()
+      home: FirstPage()
     );
   }
 }
