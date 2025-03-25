@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:konu_anlatim/MainWidgets/city.dart';
+import 'package:konu_anlatim/MainWidgets/city_detail.dart';
 
 class ListViewBuilder extends StatelessWidget {
 
@@ -42,6 +43,15 @@ class ListViewBuilder extends StatelessWidget {
           // City Detail sayfası oluşturup, hangi
           // şehre basılırsa o şehrin bilgilerini
           // Detay sayfasında gösterelim.
+
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => CityDetail(
+              name: _cties[index].name,
+              population: _cties[index].population,
+              plate: _cties[index].plate,
+            ))
+          );
         },
       ),
     );
