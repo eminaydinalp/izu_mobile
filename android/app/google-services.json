@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "625592839348",
+    "project_id": "izuflutter",
+    "storage_bucket": "izuflutter.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:625592839348:android:c173c388f78e346df07be1",
+        "android_client_info": {
+          "package_name": "com.example.konu_anlatim"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApjDVi3wCPuMs9qaS988O_FzUP-NbHAes"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
