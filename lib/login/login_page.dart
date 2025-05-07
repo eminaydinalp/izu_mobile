@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'home_page.dart';
+import 'auth_screen.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -19,7 +20,7 @@ class _LoginPageState extends State<LoginPage> {
 
     try {
       UserCredential userCredential =
-      await FirebaseAuth.instance.signInWithEmailAndPassword(
+          await FirebaseAuth.instance.signInWithEmailAndPassword(
         email: _emailController.text.trim(),
         password: _passwordController.text.trim(),
       );
@@ -82,7 +83,9 @@ class _LoginPageState extends State<LoginPage> {
                   SizedBox(height: 16),
                   TextButton(
                     onPressed: () {
-                      Navigator.of(context).pushNamed('/register');
+                      Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => AuthScreen()),
+                      );
                     },
                     child: Text('Hesabınız yok mu? Kayıt olun'),
                   ),
